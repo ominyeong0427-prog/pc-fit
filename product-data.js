@@ -1009,48 +1009,52 @@ window.fitProductData={
   "psu-1": {
     "source": "https://de-store.msi.com/products/mag-a750gl-pcie5-power-supply",
     "checkedAt": "2026-10-04",
-    "psuLength": 585,
+    "psuLength": 140,
     "xyz": [
-      257,
-      537,
-      585
+      150,
+      86,
+      140
     ],
     "labels": [
       "너비",
       "높이",
       "깊이"
     ],
-    "dimensionEvidence": "Dimensions (DxWxH) 585x 257 x 537 mm / 23.03 x 10.12 x 21.14 inches",
+    "dimensionEvidence": "Dimensions (DxWxH): 140 x 150 x 86 mm",
     "offer": {
       "seller": "MSI 독일 공식몰",
       "currency": "EUR",
       "price": 119,
       "url": "https://de-store.msi.com/products/mag-a750gl-pcie5-power-supply?variant=46978563932494",
       "option": "기본 옵션"
-    }
+    },
+    "dimensionSource": "https://www.msi.com/Power-Supply/MAG-A750GL-PCIE5/Specification",
+    "dimensionCheckedAt": "2026-10-06"
   },
   "psu-2": {
     "source": "https://de-store.msi.com/products/mag-a850gl-pcie5-power-supply",
     "checkedAt": "2026-10-04",
-    "psuLength": 585,
+    "psuLength": 140,
     "xyz": [
-      257,
-      537,
-      585
+      150,
+      86,
+      140
     ],
     "labels": [
       "너비",
       "높이",
       "깊이"
     ],
-    "dimensionEvidence": "Dimensions (DxWxH) 585x 257 x 537 mm / 23.03 x 10.12 x 21.14 inches",
+    "dimensionEvidence": "Dimensions (DxWxH): 140 x 150 x 86 mm",
     "offer": {
       "seller": "MSI 독일 공식몰",
       "currency": "EUR",
       "price": 129,
       "url": "https://de-store.msi.com/products/mag-a850gl-pcie5-power-supply?variant=46978535457102",
       "option": "기본 옵션"
-    }
+    },
+    "dimensionSource": "https://www.msi.com/Power-Supply/MAG-A850GL-PCIE5/Specification",
+    "dimensionCheckedAt": "2026-10-06"
   },
   "psu-3": {
     "source": "https://de-store.msi.com/products/mpg-a1000g-pcie5-power-supply",
@@ -1371,4 +1375,4 @@ window.fitProductData={
     "dimensionEvidence": "Dimension 150mm x140mm x86mm"
   }
 };
-for(const [type,products] of Object.entries(window.fitData.catalog))for(const p of products){p.physical=window.fitProductData[p.id]||null;if(type==='gpu'&&p.physical?.xyz)p.length=p.physical.xyz[0];if(type==='case'&&p.physical?.maxGpuLength)p.length=p.physical.maxGpuLength;}
+for(const [type,products] of Object.entries(window.fitData.catalog))for(const p of products){p.physical=window.fitProductData[p.id]||p.physical||null;if(type==='gpu'&&p.physical?.xyz)p.length=p.physical.xyz[0];if(type==='case'&&p.physical?.maxGpuLength)p.length=p.physical.maxGpuLength;if(type==='psu'&&p.physical&&!p.physical.psuLength){const axis=p.physical.labels?.indexOf('깊이');const depth=axis>=0?p.physical.xyz?.[axis]:p.length;if(Number.isFinite(depth)&&depth>0)p.physical.psuLength=depth;}}

@@ -14,4 +14,6 @@ for(const [type,items] of Object.entries(catalog)){items.forEach((p,i)=>p.id=typ
 for(const [type,items] of Object.entries(catalogLegacy))catalog[type].push(...items);
 for(const p of catalog.board)p.memoryType??='DDR5';for(const p of catalog.ram)p.memoryType??='DDR5';
 
+for(const [type,items] of Object.entries(catalogMore))catalog[type].push(...items);
+for(const [type,items] of Object.entries(catalogRange))catalog[type].push(...items);
 window.fitData={categories,catalog};
