@@ -15,6 +15,12 @@
  if(physical?.maxGpuLength)facts.push(['GPU 허용 길이',physical.maxGpuLength+' mm']);if(physical?.maxCoolerHeight)facts.push(['CPU 쿨러 허용 높이',physical.maxCoolerHeight+' mm']);if(physical?.maxPsuLength)facts.push(['파워 허용 길이',physical.maxPsuLength+' mm']);
  if(type==='case'&&p.board)facts.push(['지원 메인보드',Array.isArray(p.board)?p.board.join(' / '):p.board]);if(type==='psu'&&p.watts)facts.push(['정격 출력',p.watts+' W']);
  for(const [label,value]of facts){const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;row.append(dt,dd);$('productFacts').append(row);}
+ const audit=p.priceAudit;
+ if(audit?.status==='checked'){
+  document.querySelector('.detail-cost>span').textContent='확인한 상품 가격';
+  document.querySelector('.detail-cost>p').textContent=audit.checkedAt+' 확인 · '+audit.option+' · 배송비 '+audit.shipping.toLocaleString('ko-KR')+'원 별도 · 배송 포함 '+audit.delivered.toLocaleString('ko-KR')+'원. 실시간 가격이 아닙니다.';
+  $('priceStatus').textContent=audit.checkedAt+' 확인 · '+audit.note;const link=document.createElement('a');link.href=audit.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=audit.seller+' · '+p.price.toLocaleString('ko-KR')+'원 ↗';$('sellerLinks').append(link);
+ }else document.querySelector('.detail-cost>p').textContent=audit?.note||'실시간 판매가가 아닙니다.';
  const offer=dimensions?.offer;
  if(offer){const a=document.createElement('a');a.href=offer.url;a.target='_blank';a.rel='noopener noreferrer';const title=document.createElement('strong');title.textContent=offer.seller+' · 해외';const price=document.createElement('span');price.textContent=new Intl.NumberFormat('ko-KR',{style:'currency',currency:offer.currency}).format(offer.price)+' ↗';a.append(title,price);$('sellerLinks').append(a);$('priceStatus').textContent=dimensions.checkedAt+' 확인 · 공식몰 해당 모델의 구매 가능 옵션 최저 표시가 ('+offer.option+'). 실시간 가격이 아닙니다.';const note=document.createElement('p');note.className='seller-help';note.textContent='EUR(유로) 가격입니다. 한국 배송 가능 여부·배송비·수입세는 별도 확인하세요. 국내 판매처와의 최저가 비교 결과가 아닙니다.';$('sellerLinks').before(note);}
  const query=encodeURIComponent(p.brand+' '+p.name);

@@ -36,57 +36,21 @@ aside,.performance-summary,.game-details{font-family:inherit}.selected-row stron
 .build-layout{grid-template-columns:minmax(0,1fr) 270px;gap:24px}.build-layout aside{padding:16px}.summary-head{margin-bottom:4px}aside h3{margin:5px 0 8px}.build-hint{margin:0 0 8px}.selected-row{grid-template-columns:67px minmax(0,1fr) 20px;gap:5px;padding:8px 0;align-items:center;min-height:38px}.selected-row .part-link{grid-column:1;font-size:10px;gap:3px}.selected-row strong{grid-column:2;grid-row:1;line-height:1.45}.selected-row button[data-remove]{grid-column:3;grid-row:1;min-height:28px}.total{padding:13px 0 7px}.total>strong{margin:4px 0}.compat{padding:8px;margin-bottom:6px}.compat summary{cursor:pointer}.compat details p,.compat p{margin:8px 0}.build-layout aside .primary{padding:11px;margin-top:8px}.build-layout aside>.caption{margin:8px 0 0}.report-purpose{display:flex;align-items:center;gap:14px;padding:18px 0}.report-purpose>span{font-size:11px;color:#666}.report-purpose strong{font-size:16px;font-weight:600}.report-purpose small{margin-left:auto;font-size:10px;color:#777}.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.verdict-card{padding:22px;background:#fff;border:1px solid #e5e5e5;border-radius:4px}.verdict-con{background:#fff;border-color:#e5e5e5}.performance-summary .verdict-card h3{font-size:16px;display:flex;align-items:center;gap:8px;margin-bottom:18px}.verdict-card h3>span{display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;border:1px solid currentColor;border-radius:50%;font-size:16px}.verdict-pro h3,.verdict-con h3{color:#222}.verdict-card ul{list-style:none;padding:0;margin:0}.verdict-card li+li{border-top:1px solid #ddd8;padding-top:14px;margin-top:14px}.verdict-label{font-size:11px;color:#666;font-weight:600}.performance-summary .verdict-card p{margin:5px 0 0;line-height:1.65;color:#222;font-size:13px;word-break:keep-all;overflow-wrap:anywhere}.purchase-checks{padding:24px 0 18px}.performance-summary .purchase-checks h3{font-size:15px}.purchase-checks ul{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none;padding:0;margin:0}.purchase-checks li{border-left:2px solid #ddd;padding-left:12px}.purchase-checks strong{display:block;font-size:12px;font-weight:600;margin-bottom:6px}.purchase-checks li span{font-size:12px;line-height:1.7;color:#666}.performance-summary .review-missing{font-size:11px;color:#777}.review-sources{border-top:1px solid #eee;padding-top:14px;margin-top:0}.review-sources>div{margin:12px 0}.review-sources>div strong{display:block;font-weight:500}.review-sources a{margin-top:6px}@media(max-width:1000px){.build-layout{grid-template-columns:minmax(0,1fr) 250px;gap:20px}}@media(max-width:680px){.build-layout{grid-template-columns:1fr}.selected-row{grid-template-columns:78px minmax(0,1fr) 24px}.selected-row .part-link{font-size:11px}.report-purpose{flex-wrap:wrap;gap:8px 12px}.report-purpose small{flex-basis:100%;margin-left:0}.verdict-grid{grid-template-columns:1fr;gap:12px}.verdict-card{padding:18px}.purchase-checks ul{grid-template-columns:1fr;gap:14px}}
 
 
-/* Slightly larger section titles */
-#builder>.section-title h2{font-size:23px}.build-layout aside>h3{font-size:22px}@media(max-width:650px){#builder>.section-title h2{font-size:21px}}
-
-
-/* Two-pixel increase for builder content */
-#builder>.section-title p{font-size:14px}
-#builder .text-button{font-size:13px}
-#catalogPanel .catalog-heading h3{font-size:17px}
-#catalogPanel .catalog-heading p,#catalogPanel .catalog-heading>span{font-size:12px}
-#catalogPanel .catalog-controls label>span{font-size:12px}
-#catalogPanel .catalog-controls input,#catalogPanel .catalog-controls select{font-size:13px}
-#catalogPanel .card .brand,#catalogPanel .card h4{font-size:13px}
-#catalogPanel .card .spec{font-size:11px}
-#catalogPanel .photo-source{font-size:12px}
-#catalogPanel .price{font-size:16px}
-#catalogPanel .price small{font-size:14px}
-#catalogPanel .price:after{font-size:11px}
-#catalogPanel .card button{font-size:12px}
-#catalogPanel .caption{font-size:11px}
-#catalogPanel .more-products{font-size:14px}
-#catalogPanel .blocked-reason{font-size:13px}
-#builder aside .summary-head{font-size:11px}
-#builder aside .build-hint{font-size:12px}
-#builder aside .selected-row .part-link{font-size:12px}
-#builder aside .part-link>span{font-size:12px}
-#builder aside .selected-row strong{font-size:11px}
-#builder aside .selected-row button[data-remove]{font-size:16px}
-#builder aside .total>span{font-size:13px}
-#builder aside .total>strong{font-size:27px}
-#builder aside .compat{font-size:11px}
-#builder aside .primary{font-size:13px}
-#builder aside .aside-actions button{font-size:11px}
-#builder aside .caption{font-size:11px}
-@media(max-width:680px){
-#catalogPanel .catalog-controls input,#catalogPanel .catalog-controls select{font-size:14px}
-#builder aside .build-hint{font-size:13px}
-#builder aside .selected-row .part-link{font-size:13px}
-}
-@media(max-width:650px){
-#builder>.section-title p{font-size:13px}
-#builder aside .summary-head{font-size:12px}
-#builder aside .selected-row strong{font-size:13px}
-#builder aside .total>strong{font-size:31px}
-#builder aside .compat{font-size:12px}
-#builder aside .primary{font-size:14px}
-#builder aside .aside-actions button{font-size:13px}
-}
-
 /* Monochrome reading cues in the performance report */
 .verdict-card li{position:relative;padding-left:16px}.verdict-card li:before{content:'';position:absolute;left:0;top:8px;width:4px;height:4px;border-radius:50%;background:#555}.verdict-card li+li:before{top:22px}.verdict-label{display:inline-block;padding:2px 7px;border:1px solid #e5e5e5;border-radius:3px;color:#333;font-weight:600;line-height:1.5}.performance-summary .verdict-card p{margin-top:8px;line-height:1.85}.key-point{font-weight:700;color:#111}.report-purpose>span{border-left:3px solid #222;padding-left:9px;color:#444}.purchase-checks li{position:relative;padding-left:23px;border-left:0}.purchase-checks li:before{content:'';position:absolute;left:0;top:3px;width:11px;height:11px;border:1px solid #777;border-radius:2px}.purchase-checks strong{font-weight:700}.performance-summary .purchase-checks h3{padding-bottom:10px;border-bottom:1px solid #e5e5e5;margin-bottom:16px}
 
 .cart-link{position:relative}.cart-badge{position:absolute;top:-8px;right:-10px;display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:#222;color:#fff;font-family:inherit;font-size:11px;font-weight:600;line-height:1;box-sizing:border-box}.cart-badge[hidden]{display:none}
 
 .evidence-context{display:grid;gap:5px;margin-top:8px;font-size:12px;line-height:1.6;color:#666}.evidence-context a,.evidence-facts a{color:#333;text-decoration:underline;text-underline-offset:3px}.evidence-facts{margin:16px 0;padding:12px;border:1px solid #e5e5e5;font-size:13px}.evidence-facts summary{cursor:pointer}.evidence-facts div{display:grid;gap:5px;margin-top:12px}.verdict-card .key-point{font-weight:700}
+
+/* Keep inactive actions and reading cues visually unambiguous. */
+#reset[hidden]{display:none}.aside-actions button:disabled{opacity:.45;cursor:default;background:none}.purchase-checks li:before{width:4px;height:4px;top:9px;border:0;border-radius:50%;background:#777}.purchase-checks li{padding-left:16px}
+
+.price-audit{display:block;font-size:10px;color:#777;line-height:1.6;margin-top:7px}.price-audit[href]{text-decoration:underline}.card:has(.price-audit[href]) .price:after{content:"확인한 상품 가격 · 배송비 별도"}
+
+.benchmark-scope,.benchmark-empty{font-size:12px;line-height:1.8;color:#666}.benchmark-result{padding:22px 0;border-top:1px solid #e5e5e5}.benchmark-result h4{margin:0;font-size:14px}.benchmark-preset{font-size:12px;line-height:1.7}.benchmark-result dl{font-size:11px;line-height:1.8}.benchmark-result dl>div{display:grid;grid-template-columns:90px 1fr;gap:10px;margin:7px 0}.benchmark-result dt{color:#888}.benchmark-result dd{margin:0}.benchmark-result a{font-size:12px;text-decoration:underline}.benchmark-result .game-head{gap:15px;align-items:start}.benchmark-result .game-head strong{white-space:nowrap}
+
+.benchmark-method{padding:12px;border:1px dashed #aaa;background:#fafafa;font-size:12px;line-height:1.8;color:#555}
+
+/* Keep results visible; expand supporting evidence on demand. */
+.verdict-card{padding:20px}.verdict-card li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:12px;padding-left:0}.verdict-card li:before{display:none}.verdict-label{padding:3px 0;border:0;align-self:start;font-size:12px;color:#666}.verdict-body{min-width:0}.performance-summary .verdict-card .verdict-lead{margin:0;font-size:14px;line-height:1.75;font-weight:500}.performance-summary .verdict-card .verdict-detail{margin:7px 0 0;font-size:12px;line-height:1.7;color:#666}.evidence-context{display:block;font-size:11px;margin-top:10px}.evidence-context summary,.benchmark-evidence summary,.purchase-checks summary{cursor:pointer;color:#666;font-size:12px;line-height:1.7}.evidence-context[open]>span,.evidence-context[open]>a{display:block;margin-top:8px}.purchase-checks{padding:16px 0;border-bottom:1px solid #eee}.purchase-checks ul{margin-top:16px}.benchmark-result{padding:20px 0}.benchmark-result .game-head{align-items:baseline;flex-wrap:wrap;gap:6px 16px}.benchmark-result .game-head strong{font-size:22px}.benchmark-result .game-head small{font-size:11px;font-weight:400;color:#666}.benchmark-preset{margin:7px 0 14px;color:#666}.fps-track{position:relative;height:6px;background:#ededed;border-radius:3px;overflow:hidden}.fps-fill,.fps-range{position:absolute;top:0;height:100%;background:#292929}.fps-range{background:#999}.fps-axis{display:flex;justify-content:space-between;font-size:10px;color:#777;margin:7px 0 12px;font-variant-numeric:tabular-nums}.benchmark-evidence{margin-top:10px}.benchmark-method{padding:0;border:0;background:none;font-size:12px}.benchmark-note,.benchmark-scope{font-size:11px;line-height:1.6;color:#777}.benchmark-evidence summary:focus-visible,.evidence-context summary:focus-visible,.purchase-checks summary:focus-visible{outline:2px solid #444;outline-offset:4px}@media(max-width:680px){.verdict-card li{grid-template-columns:1fr;gap:5px}.verdict-card{padding:16px}.benchmark-result .game-head h4{flex-basis:100%}}
