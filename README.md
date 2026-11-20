@@ -12,7 +12,6 @@
 
 ## 실행
 HTML, CSS, JavaScript로 구성된 정적 사이트로 빌드나 API 키가 필요하지 않습니다.
-이 폴더에서 `python -m http.server 8000` 실행 후 http://localhost:8000 접속.
 Python은 로컬 정적 서버 용도이며 사이트의 백엔드가 아닙니다. 3D 모듈은 HTTP 환경에서 실행하세요.
 
 ## 주요 파일
